@@ -1,0 +1,3 @@
+第一題without_pipeline: 1500ps 1800ps 2000ps
+第二題with_pipeline: 750ps 800ps 1000ps
+第三題optimize:570ps、565ps 

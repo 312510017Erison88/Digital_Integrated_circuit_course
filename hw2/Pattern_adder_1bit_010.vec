@@ -1,0 +1,34 @@
+Radix    1 	  1   1
+Vname    A    B  Cin
+IO       i 	  i   i
+Tunit  ns 
+Period 0.4
+
+Trise  0.00
+Tfall  0.00
+Tdelay 0.
+
+Vih    0.7
+Vil    0.0
+
+0 1 0
+
+0 1 1
+
+0 1 0 
+
+1 0 0
+ 
+0 1 0
+
+1 0 1
+
+0 1 0
+
+1 1 0
+ 
+0 1 0
+
+1 1 1
+
+0 1 0

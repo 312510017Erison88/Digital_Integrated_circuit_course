@@ -1,0 +1,438 @@
+4-2 Minimized_Comparator
+*****************************
+**     Library setting     **
+*****************************
+.protect
+.include 'asap7sc7p5t_INVBUF_RVT.sp'
+.include 'asap7sc7p5t_SIMPLE_RVT.sp'
+.include '7nm_TT.pm'
+.unprotect
+
+.VEC 'Pattern_comparator.vec'
+
+
+.global VDD GND supply
+Vvdd VDD GND supply
+Vvss VSS GND 0 0
+.param supply = 0.7v
+*****************************
+**      Your Circuit       **
+*****************************
+* add input buffer
+X_buf_A0 VSS VDD a0 A[0] BUFx24_ASAP7_75t_R
+X_buf_A1 VSS VDD a1 A[1] BUFx24_ASAP7_75t_R
+X_buf_A2 VSS VDD a2 A[2] BUFx24_ASAP7_75t_R
+X_buf_A3 VSS VDD a3 A[3] BUFx24_ASAP7_75t_R
+X_buf_A4 VSS VDD a4 A[4] BUFx24_ASAP7_75t_R
+X_buf_A5 VSS VDD a5 A[5] BUFx24_ASAP7_75t_R
+X_buf_A6 VSS VDD a6 A[6] BUFx24_ASAP7_75t_R
+X_buf_A7 VSS VDD a7 A[7] BUFx24_ASAP7_75t_R
+X_buf_A8 VSS VDD a8 A[8] BUFx24_ASAP7_75t_R
+X_buf_A9 VSS VDD a9 A[9] BUFx24_ASAP7_75t_R
+X_buf_A10 VSS VDD a10 A[10] BUFx24_ASAP7_75t_R
+X_buf_A11 VSS VDD a11 A[11] BUFx24_ASAP7_75t_R
+X_buf_A12 VSS VDD a12 A[12] BUFx24_ASAP7_75t_R
+X_buf_A13 VSS VDD a13 A[13] BUFx24_ASAP7_75t_R
+X_buf_A14 VSS VDD a14 A[14] BUFx24_ASAP7_75t_R
+X_buf_A15 VSS VDD a15 A[15] BUFx24_ASAP7_75t_R
+X_buf_A16 VSS VDD a16 A[16] BUFx24_ASAP7_75t_R
+X_buf_A17 VSS VDD a17 A[17] BUFx24_ASAP7_75t_R
+X_buf_A18 VSS VDD a18 A[18] BUFx24_ASAP7_75t_R
+X_buf_A19 VSS VDD a19 A[19] BUFx24_ASAP7_75t_R
+X_buf_A20 VSS VDD a20 A[20] BUFx24_ASAP7_75t_R
+X_buf_A21 VSS VDD a21 A[21] BUFx24_ASAP7_75t_R
+X_buf_A22 VSS VDD a22 A[22] BUFx24_ASAP7_75t_R
+X_buf_A23 VSS VDD a23 A[23] BUFx24_ASAP7_75t_R
+X_buf_A24 VSS VDD a24 A[24] BUFx24_ASAP7_75t_R
+X_buf_A25 VSS VDD a25 A[25] BUFx24_ASAP7_75t_R
+X_buf_A26 VSS VDD a26 A[26] BUFx24_ASAP7_75t_R
+X_buf_A27 VSS VDD a27 A[27] BUFx24_ASAP7_75t_R
+X_buf_A28 VSS VDD a28 A[28] BUFx24_ASAP7_75t_R
+X_buf_A29 VSS VDD a29 A[29] BUFx24_ASAP7_75t_R
+X_buf_A30 VSS VDD a30 A[30] BUFx24_ASAP7_75t_R
+X_buf_A31 VSS VDD a31 A[31] BUFx24_ASAP7_75t_R
+X_buf_A32 VSS VDD a32 A[32] BUFx24_ASAP7_75t_R
+X_buf_A33 VSS VDD a33 A[33] BUFx24_ASAP7_75t_R
+X_buf_A34 VSS VDD a34 A[34] BUFx24_ASAP7_75t_R
+X_buf_A35 VSS VDD a35 A[35] BUFx24_ASAP7_75t_R
+X_buf_A36 VSS VDD a36 A[36] BUFx24_ASAP7_75t_R
+X_buf_A37 VSS VDD a37 A[37] BUFx24_ASAP7_75t_R
+X_buf_A38 VSS VDD a38 A[38] BUFx24_ASAP7_75t_R
+X_buf_A39 VSS VDD a39 A[39] BUFx24_ASAP7_75t_R
+X_buf_A40 VSS VDD a40 A[40] BUFx24_ASAP7_75t_R
+X_buf_A41 VSS VDD a41 A[41] BUFx24_ASAP7_75t_R
+X_buf_A42 VSS VDD a42 A[42] BUFx24_ASAP7_75t_R
+X_buf_A43 VSS VDD a43 A[43] BUFx24_ASAP7_75t_R
+X_buf_A44 VSS VDD a44 A[44] BUFx24_ASAP7_75t_R
+X_buf_A45 VSS VDD a45 A[45] BUFx24_ASAP7_75t_R
+X_buf_A46 VSS VDD a46 A[46] BUFx24_ASAP7_75t_R
+X_buf_A47 VSS VDD a47 A[47] BUFx24_ASAP7_75t_R
+X_buf_A48 VSS VDD a48 A[48] BUFx24_ASAP7_75t_R
+X_buf_A49 VSS VDD a49 A[49] BUFx24_ASAP7_75t_R
+X_buf_A50 VSS VDD a50 A[50] BUFx24_ASAP7_75t_R
+X_buf_A51 VSS VDD a51 A[51] BUFx24_ASAP7_75t_R
+X_buf_A52 VSS VDD a52 A[52] BUFx24_ASAP7_75t_R
+X_buf_A53 VSS VDD a53 A[53] BUFx24_ASAP7_75t_R
+X_buf_A54 VSS VDD a54 A[54] BUFx24_ASAP7_75t_R
+X_buf_A55 VSS VDD a55 A[55] BUFx24_ASAP7_75t_R
+X_buf_A56 VSS VDD a56 A[56] BUFx24_ASAP7_75t_R
+X_buf_A57 VSS VDD a57 A[57] BUFx24_ASAP7_75t_R
+X_buf_A58 VSS VDD a58 A[58] BUFx24_ASAP7_75t_R
+X_buf_A59 VSS VDD a59 A[59] BUFx24_ASAP7_75t_R
+X_buf_A60 VSS VDD a60 A[60] BUFx24_ASAP7_75t_R
+X_buf_A61 VSS VDD a61 A[61] BUFx24_ASAP7_75t_R
+X_buf_A62 VSS VDD a62 A[62] BUFx24_ASAP7_75t_R
+X_buf_A63 VSS VDD a63 A[63] BUFx24_ASAP7_75t_R
+
+X_buf_B0 VSS VDD b0 B[0] BUFx24_ASAP7_75t_R
+X_buf_B1 VSS VDD b1 B[1] BUFx24_ASAP7_75t_R
+X_buf_B2 VSS VDD b2 B[2] BUFx24_ASAP7_75t_R
+X_buf_B3 VSS VDD b3 B[3] BUFx24_ASAP7_75t_R
+X_buf_B4 VSS VDD b4 B[4] BUFx24_ASAP7_75t_R
+X_buf_B5 VSS VDD b5 B[5] BUFx24_ASAP7_75t_R
+X_buf_B6 VSS VDD b6 B[6] BUFx24_ASAP7_75t_R
+X_buf_B7 VSS VDD b7 B[7] BUFx24_ASAP7_75t_R
+X_buf_B8 VSS VDD b8 B[8] BUFx24_ASAP7_75t_R
+X_buf_B9 VSS VDD b9 B[9] BUFx24_ASAP7_75t_R
+X_buf_B10 VSS VDD b10 B[10] BUFx24_ASAP7_75t_R
+X_buf_B11 VSS VDD b11 B[11] BUFx24_ASAP7_75t_R
+X_buf_B12 VSS VDD b12 B[12] BUFx24_ASAP7_75t_R
+X_buf_B13 VSS VDD b13 B[13] BUFx24_ASAP7_75t_R
+X_buf_B14 VSS VDD b14 B[14] BUFx24_ASAP7_75t_R
+X_buf_B15 VSS VDD b15 B[15] BUFx24_ASAP7_75t_R
+X_buf_B16 VSS VDD b16 B[16] BUFx24_ASAP7_75t_R
+X_buf_B17 VSS VDD b17 B[17] BUFx24_ASAP7_75t_R
+X_buf_B18 VSS VDD b18 B[18] BUFx24_ASAP7_75t_R
+X_buf_B19 VSS VDD b19 B[19] BUFx24_ASAP7_75t_R
+X_buf_B20 VSS VDD b20 B[20] BUFx24_ASAP7_75t_R
+X_buf_B21 VSS VDD b21 B[21] BUFx24_ASAP7_75t_R
+X_buf_B22 VSS VDD b22 B[22] BUFx24_ASAP7_75t_R
+X_buf_B23 VSS VDD b23 B[23] BUFx24_ASAP7_75t_R
+X_buf_B24 VSS VDD b24 B[24] BUFx24_ASAP7_75t_R
+X_buf_B25 VSS VDD b25 B[25] BUFx24_ASAP7_75t_R
+X_buf_B26 VSS VDD b26 B[26] BUFx24_ASAP7_75t_R
+X_buf_B27 VSS VDD b27 B[27] BUFx24_ASAP7_75t_R
+X_buf_B28 VSS VDD b28 B[28] BUFx24_ASAP7_75t_R
+X_buf_B29 VSS VDD b29 B[29] BUFx24_ASAP7_75t_R
+X_buf_B30 VSS VDD b30 B[30] BUFx24_ASAP7_75t_R
+X_buf_B31 VSS VDD b31 B[31] BUFx24_ASAP7_75t_R
+X_buf_B32 VSS VDD b32 B[32] BUFx24_ASAP7_75t_R
+X_buf_B33 VSS VDD b33 B[33] BUFx24_ASAP7_75t_R
+X_buf_B34 VSS VDD b34 B[34] BUFx24_ASAP7_75t_R
+X_buf_B35 VSS VDD b35 B[35] BUFx24_ASAP7_75t_R
+X_buf_B36 VSS VDD b36 B[36] BUFx24_ASAP7_75t_R
+X_buf_B37 VSS VDD b37 B[37] BUFx24_ASAP7_75t_R
+X_buf_B38 VSS VDD b38 B[38] BUFx24_ASAP7_75t_R
+X_buf_B39 VSS VDD b39 B[39] BUFx24_ASAP7_75t_R
+X_buf_B40 VSS VDD b40 B[40] BUFx24_ASAP7_75t_R
+X_buf_B41 VSS VDD b41 B[41] BUFx24_ASAP7_75t_R
+X_buf_B42 VSS VDD b42 B[42] BUFx24_ASAP7_75t_R
+X_buf_B43 VSS VDD b43 B[43] BUFx24_ASAP7_75t_R
+X_buf_B44 VSS VDD b44 B[44] BUFx24_ASAP7_75t_R
+X_buf_B45 VSS VDD b45 B[45] BUFx24_ASAP7_75t_R
+X_buf_B46 VSS VDD b46 B[46] BUFx24_ASAP7_75t_R
+X_buf_B47 VSS VDD b47 B[47] BUFx24_ASAP7_75t_R
+X_buf_B48 VSS VDD b48 B[48] BUFx24_ASAP7_75t_R
+X_buf_B49 VSS VDD b49 B[49] BUFx24_ASAP7_75t_R
+X_buf_B50 VSS VDD b50 B[50] BUFx24_ASAP7_75t_R
+X_buf_B51 VSS VDD b51 B[51] BUFx24_ASAP7_75t_R
+X_buf_B52 VSS VDD b52 B[52] BUFx24_ASAP7_75t_R
+X_buf_B53 VSS VDD b53 B[53] BUFx24_ASAP7_75t_R
+X_buf_B54 VSS VDD b54 B[54] BUFx24_ASAP7_75t_R
+X_buf_B55 VSS VDD b55 B[55] BUFx24_ASAP7_75t_R
+X_buf_B56 VSS VDD b56 B[56] BUFx24_ASAP7_75t_R
+X_buf_B57 VSS VDD b57 B[57] BUFx24_ASAP7_75t_R
+X_buf_B58 VSS VDD b58 B[58] BUFx24_ASAP7_75t_R
+X_buf_B59 VSS VDD b59 B[59] BUFx24_ASAP7_75t_R
+X_buf_B60 VSS VDD b60 B[60] BUFx24_ASAP7_75t_R
+X_buf_B61 VSS VDD b61 B[61] BUFx24_ASAP7_75t_R
+X_buf_B62 VSS VDD b62 B[62] BUFx24_ASAP7_75t_R
+X_buf_B63 VSS VDD b63 B[63] BUFx24_ASAP7_75t_R
+
+C_wire_0 A[0] GND 3f
+C_wire_1 A[1] GND 3f
+C_wire_2 A[2] GND 3f
+C_wire_3 A[3] GND 3f
+C_wire_4 A[4] GND 3f
+C_wire_5 A[5] GND 3f
+C_wire_6 A[6] GND 3f
+C_wire_7 A[7] GND 3f
+C_wire_8 A[8] GND 3f
+C_wire_9 A[9] GND 3f
+C_wire_10 A[10] GND 3f
+C_wire_11 A[11] GND 3f
+C_wire_12 A[12] GND 3f
+C_wire_13 A[13] GND 3f
+C_wire_14 A[14] GND 3f
+C_wire_15 A[15] GND 3f
+C_wire_16 A[16] GND 3f
+C_wire_17 A[17] GND 3f
+C_wire_18 A[18] GND 3f
+C_wire_19 A[19] GND 3f
+C_wire_20 A[20] GND 3f
+C_wire_21 A[21] GND 3f
+C_wire_22 A[22] GND 3f
+C_wire_23 A[23] GND 3f
+C_wire_24 A[24] GND 3f
+C_wire_25 A[25] GND 3f
+C_wire_26 A[26] GND 3f
+C_wire_27 A[27] GND 3f
+C_wire_28 A[28] GND 3f
+C_wire_29 A[29] GND 3f
+C_wire_30 A[30] GND 3f
+C_wire_31 A[31] GND 3f
+C_wire_32 A[32] GND 3f
+C_wire_33 A[33] GND 3f
+C_wire_34 A[34] GND 3f
+C_wire_35 A[35] GND 3f
+C_wire_36 A[36] GND 3f
+C_wire_37 A[37] GND 3f
+C_wire_38 A[38] GND 3f
+C_wire_39 A[39] GND 3f
+C_wire_40 A[40] GND 3f
+C_wire_41 A[41] GND 3f
+C_wire_42 A[42] GND 3f
+C_wire_43 A[43] GND 3f
+C_wire_44 A[44] GND 3f
+C_wire_45 A[45] GND 3f
+C_wire_46 A[46] GND 3f
+C_wire_47 A[47] GND 3f
+C_wire_48 A[48] GND 3f
+C_wire_49 A[49] GND 3f
+C_wire_50 A[50] GND 3f
+C_wire_51 A[51] GND 3f
+C_wire_52 A[52] GND 3f
+C_wire_53 A[53] GND 3f
+C_wire_54 A[54] GND 3f
+C_wire_55 A[55] GND 3f
+C_wire_56 A[56] GND 3f
+C_wire_57 A[57] GND 3f
+C_wire_58 A[58] GND 3f
+C_wire_59 A[59] GND 3f
+C_wire_60 A[60] GND 3f
+C_wire_61 A[61] GND 3f
+C_wire_62 A[62] GND 3f
+C_wire_63 A[63] GND 3f
+
+C_wire_0_b B[0] GND 3f
+C_wire_1_b B[1] GND 3f
+C_wire_2_b B[2] GND 3f
+C_wire_3_b B[3] GND 3f
+C_wire_4_b B[4] GND 3f
+C_wire_5_b B[5] GND 3f
+C_wire_6_b B[6] GND 3f
+C_wire_7_b B[7] GND 3f
+C_wire_8_b B[8] GND 3f
+C_wire_9_b B[9] GND 3f
+C_wire_10_b B[10] GND 3f
+C_wire_11_b B[11] GND 3f
+C_wire_12_b B[12] GND 3f
+C_wire_13_b B[13] GND 3f
+C_wire_14_b B[14] GND 3f
+C_wire_15_b B[15] GND 3f
+C_wire_16_b B[16] GND 3f
+C_wire_17_b B[17] GND 3f
+C_wire_18_b B[18] GND 3f
+C_wire_19_b B[19] GND 3f
+C_wire_20_b B[20] GND 3f
+C_wire_21_b B[21] GND 3f
+C_wire_22_b B[22] GND 3f
+C_wire_23_b B[23] GND 3f
+C_wire_24_b B[24] GND 3f
+C_wire_25_b B[25] GND 3f
+C_wire_26_b B[26] GND 3f
+C_wire_27_b B[27] GND 3f
+C_wire_28_b B[28] GND 3f
+C_wire_29_b B[29] GND 3f
+C_wire_30_b B[30] GND 3f
+C_wire_31_b B[31] GND 3f
+C_wire_32_b B[32] GND 3f
+C_wire_33_b B[33] GND 3f
+C_wire_34_b B[34] GND 3f
+C_wire_35_b B[35] GND 3f
+C_wire_36_b B[36] GND 3f
+C_wire_37_b B[37] GND 3f
+C_wire_38_b B[38] GND 3f
+C_wire_39_b B[39] GND 3f
+C_wire_40_b B[40] GND 3f
+C_wire_41_b B[41] GND 3f
+C_wire_42_b B[42] GND 3f
+C_wire_43_b B[43] GND 3f
+C_wire_44_b B[44] GND 3f
+C_wire_45_b B[45] GND 3f
+C_wire_46_b B[46] GND 3f
+C_wire_47_b B[47] GND 3f
+C_wire_48_b B[48] GND 3f
+C_wire_49_b B[49] GND 3f
+C_wire_50_b B[50] GND 3f
+C_wire_51_b B[51] GND 3f
+C_wire_52_b B[52] GND 3f
+C_wire_53_b B[53] GND 3f
+C_wire_54_b B[54] GND 3f
+C_wire_55_b B[55] GND 3f
+C_wire_56_b B[56] GND 3f
+C_wire_57_b B[57] GND 3f
+C_wire_58_b B[58] GND 3f
+C_wire_59_b B[59] GND 3f
+C_wire_60_b B[60] GND 3f
+C_wire_61_b B[61] GND 3f
+C_wire_62_b B[62] GND 3f
+C_wire_63_b B[63] GND 3f
+
+
+X_comparator VSS VDD  A[63] A[62] A[61] A[60] A[59] A[58] A[57] A[56] A[55] A[54] A[53] A[52] A[51] A[50] A[49] A[48] A[47] A[46] A[45] A[44] A[43] A[42] A[41] A[40] A[39] A[38] A[37] A[36] A[35] A[34] A[33] A[32] A[31] A[30] A[29] A[28] A[27] A[26] A[25] A[24] A[23] A[22] A[21] A[20] A[19] A[18] A[17] A[16] A[15] A[14] A[13] A[12] A[11] A[10] A[9] A[8] A[7] A[6] A[5] A[4] A[3] A[2] A[1] A[0] B[63] B[62] B[61] B[60] B[59] B[58] B[57] B[56] B[55] B[54] B[53] B[52] B[51] B[50] B[49] B[48] B[47] B[46] B[45] B[44] B[43] B[42] B[41] B[40] B[39] B[38] B[37] B[36] B[35] B[34] B[33] B[32] B[31] B[30] B[29] B[28] B[27] B[26] B[25] B[24] B[23] B[22] B[21] B[20] B[19] B[18] B[17] B[16] B[15] B[14] B[13] B[12] B[11] B[10] B[9] B[8] B[7] B[6] B[5] B[4] B[3] B[2] B[1] B[0] Out Comparator
+
+C_output OUT GND 5f
+
+.SUBCKT Comparator VSS VDD  A[63] A[62] A[61] A[60] A[59] A[58] A[57] A[56] A[55] A[54] A[53] A[52] A[51] A[50] A[49] A[48] A[47] A[46] A[45] A[44] A[43] A[42] A[41] A[40] A[39] A[38] A[37] A[36] A[35] A[34] A[33] A[32] A[31] A[30] A[29] A[28] A[27] A[26] A[25] A[24] A[23] A[22] A[21] A[20] A[19] A[18] A[17] A[16] A[15] A[14] A[13] A[12] A[11] A[10] A[9] A[8] A[7] A[6] A[5] A[4] A[3] A[2] A[1] A[0] B[63] B[62] B[61] B[60] B[59] B[58] B[57] B[56] B[55] B[54] B[53] B[52] B[51] B[50] B[49] B[48] B[47] B[46] B[45] B[44] B[43] B[42] B[41] B[40] B[39] B[38] B[37] B[36] B[35] B[34] B[33] B[32] B[31] B[30] B[29] B[28] B[27] B[26] B[25] B[24] B[23] B[22] B[21] B[20] B[19] B[18] B[17] B[16] B[15] B[14] B[13] B[12] B[11] B[10] B[9] B[8] B[7] B[6] B[5] B[4] B[3] B[2] B[1] B[0] Out
+XU10 VSS VDD  n1 n2 n3 n4 n5 Out NOR5
+XU11 VSS VDD  n6 n7 n8 n9 n10 n5 NAND5
+XU12 VSS VDD  B[4] A[4] n14 XOR2
+XU13 VSS VDD  B[5] A[5] n13 XOR2
+XU14 VSS VDD  B[6] A[6] n12 XOR2
+XU15 VSS VDD  B[7] A[7] n11 XOR2
+XU16 VSS VDD  B[3] A[3] n9 XNOR2
+XU17 VSS VDD  B[2] A[2] n8 XNOR2
+XU18 VSS VDD  B[1] A[1] n7 XNOR2
+XU19 VSS VDD  B[0] A[0] n6 XNOR2
+XU20 VSS VDD  n15 n16 n17 n18 n19 n4 NAND5
+XU21 VSS VDD  B[14] A[14] n23 XOR2
+XU22 VSS VDD  B[15] A[15] n22 XOR2
+XU23 VSS VDD  B[8] A[8] n21 XOR2
+XU24 VSS VDD  B[9] A[9] n20 XOR2
+XU25 VSS VDD  B[13] A[13] n18 XNOR2
+XU26 VSS VDD  B[12] A[12] n17 XNOR2
+XU27 VSS VDD  B[11] A[11] n16 XNOR2
+XU28 VSS VDD  B[10] A[10] n15 XNOR2
+XU29 VSS VDD  n24 n25 n26 n27 n28 n3 NAND5
+XU30 VSS VDD  B[20] A[20] n32 XOR2
+XU31 VSS VDD  B[21] A[21] n31 XOR2
+XU32 VSS VDD  B[22] A[22] n30 XOR2
+XU33 VSS VDD  B[23] A[23] n29 XOR2
+XU34 VSS VDD  B[19] A[19] n27 XNOR2
+XU35 VSS VDD  B[18] A[18] n26 XNOR2
+XU36 VSS VDD  B[17] A[17] n25 XNOR2
+XU37 VSS VDD  B[16] A[16] n24 XNOR2
+XU38 VSS VDD  n33 n34 n35 n36 n37 n2 NAND5
+XU39 VSS VDD  B[36] A[36] n41 XOR2
+XU40 VSS VDD  B[37] A[37] n40 XOR2
+XU41 VSS VDD  B[38] A[38] n39 XOR2
+XU42 VSS VDD  B[39] A[39] n38 XOR2
+XU43 VSS VDD  B[35] A[35] n36 XNOR2
+XU44 VSS VDD  B[34] A[34] n35 XNOR2
+XU45 VSS VDD  B[33] A[33] n34 XNOR2
+XU46 VSS VDD  B[32] A[32] n33 XNOR2
+XU47 VSS VDD  n46 n47 n48 n49 n50 n45 NOR5
+XU48 VSS VDD  B[24] A[24] n50 XOR2
+XU49 VSS VDD  B[25] A[25] n49 XOR2
+XU50 VSS VDD  B[26] A[26] n48 XOR2
+XU51 VSS VDD  B[27] A[27] n47 XOR2
+XU52 VSS VDD  B[31] A[31] n54 XNOR2
+XU53 VSS VDD  B[30] A[30] n53 XNOR2
+XU54 VSS VDD  B[29] A[29] n52 XNOR2
+XU55 VSS VDD  B[28] A[28] n51 XNOR2
+XU56 VSS VDD  n55 n56 n57 n58 n59 n44 NOR5
+XU57 VSS VDD  B[56] A[56] n59 XOR2
+XU58 VSS VDD  B[57] A[57] n58 XOR2
+XU59 VSS VDD  B[58] A[58] n57 XOR2
+XU60 VSS VDD  B[59] A[59] n56 XOR2
+XU61 VSS VDD  B[63] A[63] n63 XNOR2
+XU62 VSS VDD  B[62] A[62] n62 XNOR2
+XU63 VSS VDD  B[61] A[61] n61 XNOR2
+XU64 VSS VDD  B[60] A[60] n60 XNOR2
+XU65 VSS VDD  n64 n65 n66 n67 n68 n43 NOR5
+XU66 VSS VDD  B[48] A[48] n68 XOR2
+XU67 VSS VDD  B[49] A[49] n67 XOR2
+XU68 VSS VDD  B[50] A[50] n66 XOR2
+XU69 VSS VDD  B[51] A[51] n65 XOR2
+XU70 VSS VDD  B[55] A[55] n72 XNOR2
+XU71 VSS VDD  B[54] A[54] n71 XNOR2
+XU72 VSS VDD  B[53] A[53] n70 XNOR2
+XU73 VSS VDD  B[52] A[52] n69 XNOR2
+XU74 VSS VDD  n73 n74 n75 n76 n77 n42 NOR5
+XU75 VSS VDD  B[40] A[40] n77 XOR2
+XU76 VSS VDD  B[41] A[41] n76 XOR2
+XU77 VSS VDD  B[42] A[42] n75 XOR2
+XU78 VSS VDD  B[43] A[43] n74 XOR2
+XU79 VSS VDD  B[47] A[47] n81 XNOR2
+XU80 VSS VDD  B[46] A[46] n80 XNOR2
+XU81 VSS VDD  B[45] A[45] n79 XNOR2
+XU82 VSS VDD  B[44] A[44] n78 XNOR2
+XU83 VSS VDD  n42 n43 n44 n45 n1 NAND4
+XU84 VSS VDD  n60 n61 n62 n63 n55 NAND4
+XU85 VSS VDD  n51 n52 n53 n54 n46 NAND4
+XU86 VSS VDD  n69 n70 n71 n72 n64 NAND4
+XU87 VSS VDD  n78 n79 n80 n81 n73 NAND4
+XU88 VSS VDD  n11 n12 n13 n14 n10 NOR4
+XU89 VSS VDD  n20 n21 n22 n23 n19 NOR4
+XU90 VSS VDD  n29 n30 n31 n32 n28 NOR4
+XU91 VSS VDD  n38 n39 n40 n41 n37 NOR4
+.ENDS
+
+.subckt NOR5 VSS VDD  a b c d e out
+X_NOR2 VSS VDD  a b w1 NOR2x2_ASAP7_75t_R
+C_wire_1 w1 GND 3f
+X_NOR3 VSS VDD  c d e w2 NOR3x2_ASAP7_75t_R
+C_wire_2 w2 GND 3f
+X_AND2 VSS VDD w1 w2 out AND2x6_ASAP7_75t_R
+C_wire_3 out GND 3f
+.ends
+
+.subckt NAND5 VSS VDD  a b c d e out
+X_NAND2 VSS VDD a b w1 NAND2x2_ASAP7_75t_R
+C_wire_1 w1 GND 3f
+X_NAND3 VSS VDD c d e w2 NAND3x2_ASAP7_75t_R
+C_wire_2 w2 GND 3f
+X_OR2 VSS VDD w1 w2 out OR2x6_ASAP7_75t_R
+C_wire_3 out GND 3f
+.ends
+
+.subckt NOR4 VSS VDD  a b c d out
+X_NOR2_0 VSS VDD  a b w1 NOR2x2_ASAP7_75t_R
+C_wire_1 w1 GND 3f
+X_NOR2_1 VSS VDD  c d w2 NOR2x2_ASAP7_75t_R
+C_wire_2 w2 GND 3f
+X_AND2 VSS VDD w1 w2 out AND2x6_ASAP7_75t_R
+C_wire_3 out GND 3f
+.ends
+
+.subckt NAND4 VSS VDD  a b c d out
+X_NAND2_0 VSS VDD a b w1 NAND2x2_ASAP7_75t_R
+C_wire_1 w1 GND 3f
+X_NAND2_1 VSS VDD c d w2 NAND2x2_ASAP7_75t_R
+C_wire_2 w2 GND 3f
+X_OR2 VSS VDD w1 w2 out OR2x6_ASAP7_75t_R
+C_wire_3 out GND 3f
+.ends
+
+.subckt XOR2 VSS VDD  a b out
+X_XOR2 VSS VDD  a b out XOR2x2_ASAP7_75t_R
+C_wire out GND 3f
+.ends
+`
+.subckt XNOR2 VSS VDD  a b out
+X_XNOR2 VSS VDD  a b out XNOR2x2_ASAP7_75t_R
+C_wire out GND 3f
+.ends
+
+.tran 10ps 68ns
+*****************************
+**    Simulator setting    **
+*****************************
+.op
+.option post 
+.options probe			*with I/V in .lis
+.probe v(*) i(*) 
+.option captab			*with cap value in .lis
+.TEMP 25
+
+*****************************
+**      Measurement        **
+*****************************
+.measure tmin_delay TRIG v(a0) VAL=supply/2 RISE=1 TARG v(out) VAL=supply/2 RISE=1
+.measure TRAN Trising_out TRIG V(Out) VAL=0.1*supply RISE=1 TARG V(Out) VAL=0.9*supply RISE=1
+.measure TRAN Tfalling_out TRIG V(Out) VAL=0.9*supply FALL=1 TARG V(Out) VAL=0.1*supply FALL=1
+
+.measure TRAN average_power avg power
+
+.end
